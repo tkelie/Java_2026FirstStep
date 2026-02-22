@@ -1,0 +1,11 @@
+alice LOGIN
+alice LOGOUT
+bob LOGIN
+alice LOGIN
+charlie LOGIN
+diina LOGIN
+diina LOGOUT
+charlie LOGOUT
+charlie LOGIN
+alice LOGOUT
+bob LOGOUT
