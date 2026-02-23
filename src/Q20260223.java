@@ -68,6 +68,7 @@ public class Q20260223 {
 
             var sortedList = list.stream()
                     .sorted(Comparator.comparing(Log::name) // 名前順ソート
+                            .thenComparing(Log::date) // 日付順ソート
                             .thenComparing(Log::time)) // 時刻順ソート
                     .toList();
 
