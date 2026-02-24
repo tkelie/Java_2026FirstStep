@@ -1,0 +1,6 @@
+alice IN
+bob IN
+alice OUT
+carol IN
+bob OUT
+dave IN
