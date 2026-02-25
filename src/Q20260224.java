@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Q20260224 {
-    static final String FILENAME = "question/20260224.txt";
+    static final String FILENAME = "question\\20260224.txt";
 
     // 状態
     enum State {

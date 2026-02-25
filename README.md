@@ -18,78 +18,33 @@ Java 1.4 時代からのブランク（約20年）を埋めるために、
 
 ## 📂 ディレクトリ構成
 
+### [ログのフィルタと重複ユーザー検出 (2026/02/22)](question/20260222.md)
+- [src/Q20260222.java](src/Q20260222.java) ：自作コード
+- [src/Q20260222_new.java](src/Q20260222_new.java) ：改良版
+- [question/20260222.txt](question/20260222.txt) ：サンプル入力データ
+
+### [ログ解析・セッション時間・平均計算 (2026/02/23)](question/20260223.md)
+- [src/Q20260223.java](src/Q20260223.java) ：自作コード
+- [src/Q20260223_new.java](src/Q20260223_new.java) ：改良版
+- [question/20260223.txt](question/20260223.txt) ：サンプル入力データ
+
+### [ログイン人数カウント (2026/02/24)](question/20260224.md)
+- [src/Q20260224.java](src/Q20260224.java) ：自作コード
+- [src/Q20260224_new.java](src/Q20260224_new.java) ：改良版
+- [question/20260224.txt](question/20260224.txt) ：サンプル入力データ
+
+
+### [ログイン人数カウント (2026/02/25)](question/20260225.md)
 ```
-
-src/
-Q20260222.java       # ログのフィルタと重複ユーザー検出：自作コード
-Q20260222_new.java   # (同上) モダン化した改良版
-Q20260223.java       # ログ解析・セッション時間・平均計算：自作コード
-Q20260223_new.java   # (同上) モダン化した改良版
-question/
-20260222.md          # 2026/02/22の練習問題
-20260222.txt         # (同上)用入力データ
-20260223.md          # 2026/02/23の練習問題
-20260223.txt         # (同上)用入力データ
-
+予定
+- [src/Q20260225.java](src/Q20260225.java) ：自作コード
+- [src/Q20260225_new.java](src/Q20260225_new.java) ：改良版
+- [question/20260225.txt](question/20260225.txt) ：サンプル入力データ
 ```
 
 ---
 
-## 📝 問題概要
 
-### Q20260222 — 「LOGIN が複数回あるユーザーを抽出」
-ログファイルの形式（例）：
-
-```
-
-Alice LOGIN
-Bob LOGIN
-Alice LOGIN
-Charlie LOGIN
-Bob LOGOUT
-
-```
-
-**やること**
-- LOGIN のみ抽出
-- ユーザー名でソート
-- 2 回以上ログインしているユーザーを出力
-
-**学んだこと**
-- record によるデータクラスの簡潔な表現  
-- enum の switch を使った安全なパース  
-- Stream の filter / sorted / toArray  
-- Map に頼らずシンプルに集計するテクニック
-
----
-
-### Q20260223 — 「ログからセッション時間を求める」
-ログ形式（例）：
-
-```
-
-2025-02-21 09:00 LOGIN Alice
-2025-02-21 12:00 LOGOUT Alice
-2025-02-21 09:00 LOGIN Bob
-2025-02-21 10:00 LOGOUT Bob
-
-```
-
-**解く内容**
-1. ユーザーごとの LOGIN 回数（昇順）
-2. セッション（Login → Logout）の時間計算
-3. 最も合計滞在時間が長いユーザー
-4. 平均セッション時間の算出
-
-**学んだこと**
-- `LocalDate`, `LocalTime`, `LocalDateTime` の運用  
-- `Duration.between()` による時間差計算  
-- Comparator の多段ソート（名前 → 日付 → 時刻 → 操作）  
-- `Collectors.groupingBy()` + `summingLong()`  
-- `record` を使ったデータの明確な建て付け  
-- try-with-resources による安全なファイル読み込み
-
----
 
 ## 🧠 使用したモダン Java の機能
 

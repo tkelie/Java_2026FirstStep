@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Q20260224_new {
-    static final String FILENAME = "question/20260224.txt";
+    static final String FILENAME = "question\\20260224.txt";
 
     enum State {
         IN, OUT;
