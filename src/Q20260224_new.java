@@ -1,8 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.Scanner;
 
+// ログイン人数カウント(改良版)
 public class Q20260224_new {
     static final String FILENAME = "question\\20260224.txt";
 

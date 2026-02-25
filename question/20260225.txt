@@ -1,5 +1,11 @@
 alice 1200
 bob 300
-alice 800
+emily 800
 carol 500
 bob 700
+dinna 1200
+bob 500
+alice 800
+carol 700
+bob 700
+emily 500

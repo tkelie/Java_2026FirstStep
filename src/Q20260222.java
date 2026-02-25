@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-// 文字列の集計とフィルタ
+// ログのフィルタと重複ユーザー検出
 public class Q20260222 {
 
     // ファイル名

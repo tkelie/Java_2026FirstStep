@@ -33,15 +33,18 @@ Java 1.4 時代からのブランク（約20年）を埋めるために、
 - [src/Q20260224_new.java](src/Q20260224_new.java) ：改良版
 - [question/20260224.txt](question/20260224.txt) ：サンプル入力データ
 
-
-### [ログイン人数カウント (2026/02/25)](question/20260225.md)
-```
-予定
+### [購入合計ランキング (2026/02/25)](question/20260225.md)
 - [src/Q20260225.java](src/Q20260225.java) ：自作コード
 - [src/Q20260225_new.java](src/Q20260225_new.java) ：改良版
 - [question/20260225.txt](question/20260225.txt) ：サンプル入力データ
-```
 
+### [【予定】連続ログイン最長時間 (2026/02/26)](question/20260226.md)
+```
+予定
+- [src/Q20260226.java](src/Q20260226.java) ：自作コード
+- [src/Q20260226_new.java](src/Q20260226_new.java) ：改良版
+- [question/20260226.txt](question/20260226.txt) ：サンプル入力データ
+```
 ---
 
 

@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+// ログのフィルタと重複ユーザー検出(改良版)
 public class Q20260222_new {
 
     static String FILENAME = "question\\20260222.txt";

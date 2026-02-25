@@ -3,8 +3,8 @@ alice LOGOUT
 bob LOGIN
 alice LOGIN
 charlie LOGIN
-diina LOGIN
-diina LOGOUT
+dinna LOGIN
+dinna LOGOUT
 charlie LOGOUT
 charlie LOGIN
 alice LOGOUT

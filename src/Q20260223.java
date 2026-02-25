@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+// ログ解析・セッション時間・平均計算
 public class Q20260223 {
     // ファイル名
     static String FILENAME = "question\\20260223.txt";

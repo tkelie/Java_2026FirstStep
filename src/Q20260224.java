@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+// ログイン人数カウント
 public class Q20260224 {
     static final String FILENAME = "question\\20260224.txt";
 
