@@ -1,0 +1,10 @@
+09:00 LOGIN alice
+09:30 LOGIN bob
+10:00 LOGOUT alice
+10:30 LOGOUT bob
+11:00 LOGIN bob
+11:30 LOGIN alice
+12:00 LOGIN charlie
+12:30 LOGOUT bob
+13:00 LOGOUT alice
+13:00 LOGOUT charlie
