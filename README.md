@@ -48,9 +48,14 @@ Java 1.4 時代からのブランク（約20年）を埋めるために、
 - [src/Q20260227_new.java](src/Q20260227_new.java) ：改良版
 - [question/20260227.txt](question/20260227.txt) ：サンプル入力データ
 
-以下予定
-### [奇数のみの合計・反転配列の表示 (2026/02/28)](question/20260228.md)
+### [奇数のみの合計（Stream API） (2026/02/28)](question/20260228.md)
+- [src/Q20260228.java](src/Q20260228.java) ：自作コード
+- [src/Q20260228_new.java](src/Q20260228_new.java) ：改良版
+- [question/20260228.txt](question/20260228.txt) ：サンプル入力データ
 
+---
+以下予定
+### 反転配列の表示
 ### Fibonacci チェッカー
 ### 文字列の回文判定
 

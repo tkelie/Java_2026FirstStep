@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+// 文字数カウント
 public class Q20260227 {
     static final String FILENAME = "question/20260227.txt";
 

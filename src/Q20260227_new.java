@@ -3,10 +3,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+
+// 文字数カウント(改良版)
 public class Q20260227_new {
 
     static final String FILENAME = "question/20260227.txt";
-
     public static void main(String[] args) {
         try (var sc = new Scanner(new File(FILENAME))) {
 
