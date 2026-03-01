@@ -53,22 +53,22 @@ Java 1.4 時代からのブランク（約20年）を埋めるために、
 - [src/Q20260228_new.java](src/Q20260228_new.java) ：改良版
 - [question/20260228.txt](question/20260228.txt) ：サンプル入力データ
 
-### [反転配列の表示 (2026/03/01)](question/20260301.md#✅問題2—反転配列の表示（メソッド参照・Stream）)
+### [反転配列の表示 (2026/03/01)](question/20260301.md##-%E5%95%8F%E9%A1%8C-2--%E5%8F%8D%E8%BB%A2%E9%85%8D%E5%88%97%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E5%8F%82%E7%85%A7stream)
 - [src/Q20260301_2.java](src/Q20260301_2.java) ：自作コード
 - [src/Q20260301_2_new.java](src/Q20260301_2_new.java) ：改良版
 - [question/20260301_Q2.txt](question/20260301_Q2.txt) ：サンプル入力データ
 
-### [Fibonacci チェッカー (2026/03/01)](question/20260301.md#✅問題3—Fibonacciチェッカー（Optionalを活用）)
+### [Fibonacci チェッカー (2026/03/01)](question/20260301.md#-%E5%95%8F%E9%A1%8C-3--fibonacci-%E3%83%81%E3%82%A7%E3%83%83%E3%82%AB%E3%83%BCoptional-%E3%82%92%E6%B4%BB%E7%94%A8)
 - [src/Q20260301_3.java](src/Q20260301_3.java) ：自作コード
 - [src/Q20260301_3_new.java](src/Q20260301_3_new.java) ：改良版
 - [question/20260301_Q3.txt](question/20260301_Q3.txt) ：サンプル入力データ
 
-### [文字列の回文判定 (2026/03/01)](question/20260301.md#✅問題4—文字列の回文判定（Modernswitch式）)
+### [文字列の回文判定 (2026/03/01)](question/20260301.md#-%E5%95%8F%E9%A1%8C-4--%E6%96%87%E5%AD%97%E5%88%97%E3%81%AE%E5%9B%9E%E6%96%87%E5%88%A4%E5%AE%9Amodern-switch-%E5%BC%8F)
 - [src/Q20260301_4.java](src/Q20260301_4.java) ：自作コード
 - [src/Q20260301_4_new.java](src/Q20260301_4_new.java) ：改良版
 - [question/20260301_Q4.txt](question/20260301_Q4.txt) ：サンプル入力データ
 
-### [日付データ集計 (2026/03/01)](question/20260301.md#✅問題5—日付データ集計（Date&amp;TimeAPI）)
+### [日付データ集計 (2026/03/01)](question/20260301.md#-%E5%95%8F%E9%A1%8C-5--%E6%97%A5%E4%BB%98%E3%83%87%E3%83%BC%E3%82%BF%E9%9B%86%E8%A8%88date--time-api)
 - [src/Q20260301_5.java](src/Q20260301_5.java) ：自作コード
 - [src/Q20260301_5_new.java](src/Q20260301_5_new.java) ：改良版
 - [question/20260301_Q5.txt](question/20260301_Q5.txt) ：サンプル入力データ
