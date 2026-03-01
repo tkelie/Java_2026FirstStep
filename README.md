@@ -79,16 +79,58 @@ Java 1.4 時代からのブランク（約20年）を埋めるために、
 
 ## 🧠 使用したモダン Java の機能
 
-| 機能 | 使用例 |
-|-----|--------|
-| **record** | `record Log(LocalDate date, ...)` |
-| **enum + switch 式** | `switch (s) { case "LOGIN" -> LOGIN; ... }` |
-| **Stream API** | filter / map / sorted / groupingBy |
-| **Comparator.comparing** | 多段ソートの実装 |
-| **java.time API** | LocalDate / LocalTime / Duration |
-| **summarizingLong** | 集計の一括処理 |
-| **メソッド参照 ::** | `Log[]::new` など |
-| **try-with-resources** | 自動クローズによる安全な I/O |
+| 機能                           | 使用例  |
+| ----------------------------- | ------------------------------------------------------ |
+| **record**                    | `record Log(LocalDate date, ...)` |
+| **enum + switch 式**          | `switch (s) { case "LOGIN" -> LOGIN; ... }` |
+| **Stream API**                | filter / map / sorted / groupingBy |
+| **ラムダ式**                   | `i -> i % 2 != 0`（奇数判定）、`c -> (char)c`（文字変換） |
+| **メソッド参照 (::)**          | `Integer::parseInt` / `String::valueOf` / `Log[]::new` |
+| **Comparator.comparing**      | ログソート / 集計の並び替え（多段ソート含む） |
+| **Comparator.reverseOrder()** | 配列の反転（Stream 利用時） |
+| **java.time API**             | LocalDate / Duration / ChronoUnit |
+| **summarizingLong**           | 集計の一括処理 |
+| **Optional**                  | `Optional<Boolean>`（Fibonacci の安全な判定） |
+| **List.reversed()**           | Java 21 の新機能。リストを反転 |
+| **try-with-resources**        | `try (var sc = new Scanner(...))` 自動クローズによる安全な I/O |
+| **StringBuilder**             | List<Character> → String の連結 |
+
+---
+
+## 📝 解説（一部）
+
+### ✔ Stream API
+
+最も活用したモダン API。
+リストからの抽出・変換・集計を一連の流れで記述。
+
+* 奇数のみ合計
+* 配列の反転（`IntStream.range()` など）
+* ログ集計（filter, groupingBy など）
+
+### ✔ Optional
+
+Fibonacci チェッカーでは
+「値があるときだけ処理する」
+という Optional の本来の使い方を実践。
+
+### ✔ java.time API
+
+従来の `Date` / `Calendar` ではなく、
+`LocalDate` + `ChronoUnit.DAYS.between()` を利用。
+
+### ✔ switch 式・enum
+
+ログ判定で
+
+* `switch (s) ->`
+* enum の組み合わせ
+  という Java 14+ の安全な記述方法を使用。
+
+### ✔ List.reversed()（Java 21）
+
+従来の `Collections.reverse()` を使わず、
+**Immutable な reversed view を返す** 新しい API。
 
 ---
 
