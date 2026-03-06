@@ -1,22 +1,33 @@
-# Java Practice Codes (2026)
+# Java Practice – First Step (2026)
 
-このリポジトリは、Java エンジニア復帰のための学習記録です。  
-Java 1.4 時代からのブランク（約20年）を埋めるために、  
-**現代的な Java（Java 17+）の書き方を使ったミニ問題集と解答**をまとめています。
+このリポジトリは  
+**Java エンジニア復帰に向けた基礎トレーニングの記録**です。
 
-## 🎯 学習の目的
+Java の基本文法やコレクション、  
+Java 8 以降のモダン機能（Stream / Optional / Date API など）を  
+小さな問題を解きながら復習しました。
 
-- Stream API / ラムダ式 / Comparator / Optional など  
-  **Java 8 以降のモダン構文を習得する**
-- record / enum / switch 式など  
-  **Java 14+ のシンプルで安全な書き方を体得する**
-- Date & Time API（java.time.*）に慣れる
-- 実務でも使われるコードの書き方（責務の分離、読みやすさ、保守性）
-- GitHub でコード管理（コミット・ブランチ・README 記述の練習）
+このリポジトリで基礎を整理した後、  
+次の段階として
+
+👉  [Java_2026SecondStep](https://github.com/tkelie/Java_2026SecondStep)
+
+で **テスト・設計・CLIツール化など実務寄りの学習**に進んでいます。
 
 ---
 
-## 📂 ディレクトリ構成
+# 🎯 学習の目的
+
+- Java 基本文法の復習
+- Stream API の理解
+- Optional の扱い
+- Comparator を使ったソート処理
+- java.time API の扱い
+- 小さな問題を **モダン Java で書き直す練習**
+
+---
+
+# 📂 構成
 
 ### [ログのフィルタと重複ユーザー検出 (2026/02/22)](question/20260222.md)
 - [src/Q20260222.java](src/Q20260222.java) ：自作コード
@@ -73,105 +84,117 @@ Java 1.4 時代からのブランク（約20年）を埋めるために、
 - [src/Q20260301_5_new.java](src/Q20260301_5_new.java) ：改良版
 - [question/20260301_Q5.txt](question/20260301_Q5.txt) ：サンプル入力データ
 
----
-
-
-
-## 🧠 使用したモダン Java の機能
-
-| 機能                           | 使用例  |
-| ----------------------------- | ------------------------------------------------------ |
-| **record**                    | `record Log(LocalDate date, ...)` |
-| **enum + switch 式**          | `switch (s) { case "LOGIN" -> LOGIN; ... }` |
-| **Stream API**                | filter / map / sorted / groupingBy |
-| **ラムダ式**                   | `i -> i % 2 != 0`（奇数判定）、`c -> (char)c`（文字変換） |
-| **メソッド参照 (::)**          | `Integer::parseInt` / `String::valueOf` / `Log[]::new` |
-| **Comparator.comparing**      | ログソート / 集計の並び替え（多段ソート含む） |
-| **Comparator.reverseOrder()** | 配列の反転（Stream 利用時） |
-| **java.time API**             | LocalDate / Duration / ChronoUnit |
-| **summarizingLong**           | 集計の一括処理 |
-| **Optional**                  | `Optional<Boolean>`（Fibonacci の安全な判定） |
-| **List.reversed()**           | Java 21 の新機能。リストを反転 |
-| **try-with-resources**        | `try (var sc = new Scanner(...))` 自動クローズによる安全な I/O |
-| **StringBuilder**             | List<Character> → String の連結 |
+※問題ごとに Java ファイルを作成し解答。
 
 ---
 
-## 📝 解説（一部）
+# 🧩 練習内容
 
-### ✔ Stream API
-
-最も活用したモダン API。
-リストからの抽出・変換・集計を一連の流れで記述。
-
-* 奇数のみ合計
-* 配列の反転（`IntStream.range()` など）
-* ログ集計（filter, groupingBy など）
-
-### ✔ Optional
-
-Fibonacci チェッカーでは
-「値があるときだけ処理する」
-という Optional の本来の使い方を実践。
-
-### ✔ java.time API
-
-従来の `Date` / `Calendar` ではなく、
-`LocalDate` + `ChronoUnit.DAYS.between()` を利用。
-
-### ✔ switch 式・enum
-
-ログ判定で
-
-* `switch (s) ->`
-* enum の組み合わせ
-  という Java 14+ の安全な記述方法を使用。
-
-### ✔ List.reversed()（Java 21）
-
-従来の `Collections.reverse()` を使わず、
-**Immutable な reversed view を返す** 新しい API。
+問題は **日付ごとに作成**し、  
+少しずつモダン Java の書き方へ書き換えています。
 
 ---
 
-## 🧩 今後の予定（ToDo）
+## 基本文法・コレクション
 
-- [ ] JUnit による自動テスト追加  
-- [ ] 例外パターン（ログ欠損・順番崩れ）のハンドリング  
-- [ ] ログ集計ツールとしてクラス分割（LogReader, SessionAnalyzer）  
-- [ ] Stream → Map をより関数型的に改善  
-- [ ] Spring Boot / CLI ツール化して実際に動くアプリとして仕上げる  
-
----
-
-## 🚀 開発環境
-
-- Java 25
-- VSCode（Extension Pack for Java）
-- GitHub（バージョン管理）
-- Windows 11
+- 配列処理
+- List / Map
+- ファイル読み込み
+- ループ処理
 
 ---
 
----
+## Stream API
+
+- filter
+- map
+- collect
+- groupingBy
+- counting
+
+例
+
+```java
+Map<String, Long> result =
+    logs.stream()
+        .collect(Collectors.groupingBy(
+            Log::userId,
+            Collectors.counting()
+        ));
+````
 
 ---
 
-## Getting Started
+## Optional
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+null チェックの代わりに
+`Optional` を利用した安全な処理。
 
-## Folder Structure
+```java
+Optional<List<Log>> logs = reader.read(path);
+```
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Comparator
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+コレクションのソート処理。
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```java
+logs.sort(
+    Comparator.comparing(Log::time)
+);
+```
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## java.time API
+
+旧 `Date` / `Calendar` の代わりに
+
+* LocalDate
+* LocalDateTime
+* Duration
+
+などを利用。
+
+---
+
+# 🧠 使用した Java 機能
+
+| 機能             | 内容       |
+| -------------- | -------- |
+| Stream API     | コレクション処理 |
+| Optional       | null 安全  |
+| Comparator     | ソート      |
+| java.time      | 日付処理     |
+| File / Scanner | ファイル読み込み |
+
+---
+
+# 🚀 次のステップ
+
+このリポジトリで基礎を復習した後、
+より実務的な内容として以下を学習。
+
+👉
+**Java Practice – Second Step**
+
+[https://github.com/tkelie/Java_2026SecondStep](https://github.com/tkelie/Java_2026SecondStep)
+
+内容
+
+* JUnit テスト
+* 例外設計
+* クラス分割（責務分離）
+* Stream API 発展
+* CLIツール作成
+
+---
+
+# 💻 開発環境
+
+* Java 25
+* VSCode
+* GitHub
+* Windows 11
